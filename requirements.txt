@@ -1,0 +1,17 @@
+Django==1.4
+South==1.0.1
+pytz==2012c
+bencode==1.0
+psycopg2==2.5
+isodate==0.4.9
+pycrypto==2.6.1
+django-extensions==1.1.1
+jsonfield==0.9.19
+oauth2==1.5.211
+shortuuid==0.4.2
+django-jsonify==0.3.0
+django-endless-pagination==2.0
+amqp==1.4.6
+celery==3.1.18
+supervisor==3.0a12
+rfc3987==1.3.4
