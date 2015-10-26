@@ -12,8 +12,8 @@ echo Starting Gunicorn.
 exec gunicorn adl_lrs.wsgi:application \
     --name adl_lrs \
     --bind 0.0.0.0:8000 \
-    --workers 3 \
-    --log-level=info \
+    --workers 2 \
+    --log-level=info
     --log-file=/usr/src/logs/gunicorn.log \
     --access-logfile=/usr/src/logs/access.log \
     "$@"
