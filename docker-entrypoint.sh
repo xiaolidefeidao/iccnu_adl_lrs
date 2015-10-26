@@ -13,7 +13,6 @@ exec gunicorn adl_lrs.wsgi_prod:application \
     --name adl_lrs \
     --bind 0.0.0.0:8000 \
     --workers 2 \
-    --worker-class gevent \
     --timeout 300 \
     --log-level=info \
     --log-file=/usr/src/logs/gunicorn.log \
