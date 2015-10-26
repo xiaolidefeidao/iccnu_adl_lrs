@@ -1,9 +1,10 @@
-# settings_prod.py
+# settings.prod.py
 import os
 
 from settings import *
 
 print 'running in production mode'
+WSGI_APPLICATION = 'adl_lrs.wsgi_prod.application'
 
 DEBUG = TEMPLATE_DEBUG = False
 SITE_DOMAIN = 'lrs.iccnu.net:80'
