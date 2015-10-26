@@ -1,4 +1,4 @@
-# settings_production.py
+# settings_prod.py
 import os
 
 from settings import *
