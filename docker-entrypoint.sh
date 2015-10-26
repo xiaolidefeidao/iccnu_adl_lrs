@@ -1,5 +1,5 @@
 #!/bin/bash
-python manage.py migrate                  # Apply database migrations
+#python manage.py migrate                  # Apply database migrations
 python manage.py collectstatic --noinput  # Collect static files
 
 # Prepare log files and start outputting logs to stdout
@@ -13,7 +13,9 @@ exec gunicorn adl_lrs.wsgi_prod:application \
     --name adl_lrs \
     --bind 0.0.0.0:8000 \
     --workers 2 \
-    --log-level=info
+    --worker-class gevent \
+    --timeout 300 \
+    --log-level=info \
     --log-file=/usr/src/logs/gunicorn.log \
     --access-logfile=/usr/src/logs/access.log \
     "$@"
