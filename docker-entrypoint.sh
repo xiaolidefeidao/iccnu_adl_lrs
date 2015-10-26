@@ -9,7 +9,7 @@ tail -n 0 -f /usr/src/logs/*.log &
 
 # Start Gunicorn processes
 echo Starting Gunicorn.
-exec gunicorn adl_lrs.wsgi.prod:application \
+exec gunicorn adl_lrs.wsgi_prod:application \
     --name adl_lrs \
     --bind 0.0.0.0:8000 \
     --workers 2 \
